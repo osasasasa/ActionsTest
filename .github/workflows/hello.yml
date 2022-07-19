@@ -1,12 +1,10 @@
-name: Repo Access
+name: Hello World
+
 on:
-  push:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  build:
-    name: Check the contents of the file
+  say_hello:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - run: cat README.md
+      - run: echo "Hello World!"
